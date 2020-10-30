@@ -1,7 +1,7 @@
 let currentTime = moment().hours();
 $("#currentDay").text(moment().format('dddd MMMM Do YYYY, h:mm a'));
 
-// save to local storage
+// save  input to local storage
 $(".saveBtn").on("click", function() {
     let time = $(this).parent().attr("data-hour");
     let text = $(this).siblings(".text").val();
@@ -10,7 +10,7 @@ $(".saveBtn").on("click", function() {
 
 // function color
 // need variable for current hour
-// find how to read each time block
+// find how to read each time block 
     $(".time-block").each(function() {
     let newTime = $(this).attr("data-hour");
     if (newTime < currentTime) {
@@ -27,7 +27,7 @@ $(".saveBtn").on("click", function() {
     console.log(currentTime);
     console.log(newTime);
 });
-
+// reproduce items from local storage when page is refreshed
     $("#saved-text-9").text(localStorage.getItem("9"));
     $("#saved-text-10").text(localStorage.getItem("10"));
     $("#saved-text-11").text(localStorage.getItem("11"));
